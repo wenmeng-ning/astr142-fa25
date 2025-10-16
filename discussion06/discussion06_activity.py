@@ -7,10 +7,22 @@ if __name__ == '__main__':
 	keep_going = True
 	while keep_going:
 		### FIXME what happens if you enter something that isn't an int?
-		num1 = int(input('Enter numerator >> '))
-		num2 = int(input('Enter denominator >> '))
+        input1 = input('Enter numerator >> ')
+        input2 = input('Enter denominator >> ')
+        while input1 is not int:
+            input1 = int(input('Please enter an integer for the numerator: >> '))
+        while input2 is not int:
+            input2 = int(input('Please enter an integer for the denominator: >> '))
+        
+        num1 = int(input1)
+        num2 = int(input2)
+        
 		### FIXME what happens if denom is 0?
-		print(num1, '/', num2, '=', num1/num2)
+        if num2 == 0:
+            print('undefined')
+		else:
+            print(num1, '/', num2, '=', num1/num2)
+            
 		### FIXME write the inputs/outputs and any errors encountered
 		### to a log file
 
