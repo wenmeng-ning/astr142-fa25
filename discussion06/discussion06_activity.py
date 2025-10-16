@@ -28,10 +28,11 @@ if __name__ == '__main__':
 		### What if something not y/n is entered?
 		
 		rerun = input('Keep going? [Y/n] >> ')
-		while (rerun != 'Y' or rerun != 'y' or rerun != 'n' or rerun != 'N'):
+		while (rerun != 'Y' and rerun != 'y' and rerun != 'n' and rerun != 'N'):
 			print("Enter accepted value:")
 			rerun = input('Keep going? [Y/n] >> ')
 			
 		if rerun not in ['Y', 'y']:
 			keep_going = False
+
 
