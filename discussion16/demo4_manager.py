@@ -1,5 +1,6 @@
 '''
-Demo of using multiprocessing Manager to share state between processes.'''
+Demo of using multiprocessing Manager to create shared objects between processes.
+'''
 from multiprocessing import Process, Manager
 
 def update_dict(d):
